@@ -1,0 +1,51 @@
+.Search {
+  margin: 5% 1% 1% 1%;
+  width: 98%;
+}
+
+.Search input {
+  width: 85%;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.Search .button {
+  border-radius: 8px;
+  height: 38px;
+  padding-top: 14px;
+  padding-left: 12px;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(50, 50, 50, 0.3);
+  color: #ccc;
+}
+
+.Search .button:hover {
+  background-color: rgba(100, 100, 100, 0.5);
+  cursor: pointer;
+}
+
+.error {
+  color: #930606;
+  font-weight: bold;
+  text-align: center;
+  height: 20px;
+}
+
+@media only screen and (max-width : 330px) {
+  .Search input {
+    font-size: 20px;
+  }
+
+  .Search .button {
+    height: 35px;
+    width: 35px;
+    padding: 10px 0 0 10px;
+  }
+
+  .error {
+    font-size: 12px;
+    height: 16px;
+  }
+
+}

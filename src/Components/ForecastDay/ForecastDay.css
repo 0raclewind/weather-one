@@ -1,0 +1,15 @@
+.forecastCard {
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0.5%;
+  width: 19%;
+  display: inline-block;
+  border-radius: 5%;
+  padding: 1% 0 1%;
+}
+
+@media only screen and (max-width : 330px) {
+  .forecastCard {
+    font-size: 12px;
+  }
+}

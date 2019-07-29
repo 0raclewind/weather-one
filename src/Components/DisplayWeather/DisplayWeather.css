@@ -1,0 +1,148 @@
+.DisplayWeather {
+  width: 98%;
+  margin-top: 30px;
+  background-color: rgba(50, 50, 50, 0.3);
+  color: #eee;
+  border-radius: 15px;
+  padding: 1%;
+  margin: 1%;
+}
+
+.cityName {
+  text-align: center;
+  font-size: 36px;
+}
+
+.temperature {
+  margin-left: 2%;
+}
+
+.icon {
+  text-align: center;
+  font-weight: bold;
+}
+
+.icon img {
+  height: 70px;
+}
+
+.main {
+  text-align: center;
+}
+
+.temp {
+  font-size: 54px;
+  text-align: right;
+  margin-top:
+}
+
+.sun, .wind {
+  border-radius: 5px;
+  width: 44%;
+  margin: 1% 0 1% 4%;
+  margin-bottom: 3%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sun .row>div, .wind .row>div {
+  border-radius: 3px;
+  width: 48%;
+  margin: 0 1% 0 1%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sun .row>div p, .wind .row>div p {
+  padding-top: 5%;
+}
+
+.windDir {
+  background-image: url('./compass.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+#arrow {
+  background-image: url('./arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin-top: 0;
+}
+
+.row .name {
+  font-weight: bold;
+  margin: 2%;
+}
+
+.footer {
+  font-size: 9px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer a {
+  color: #90bcff;
+}
+
+.footer>img {
+  padding-bottom: 2px;
+  margin: 0 4px 4px 4px;
+  background-position: right;
+}
+
+.footer a {
+  margin: 0 4px 0 4px;
+}
+
+.valdo {
+  font-size: 14px;
+}
+
+.temperature>.glyphicon-refresh {
+  margin-top: 24px;
+  margin-left: 0;
+  font-size: 20px;
+  cursor: pointer;
+  color: #eee;
+}
+
+.windSpeed span>.glyphicon-refresh {
+  font-size: 8px;
+}
+
+.unitsTo {
+  color: #eee;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 26px;
+  padding-left: 5px;
+}
+
+/*display everything correctly on iPhone 4 and 5 */
+@media only screen and (max-width : 330px) {
+  .cityName {
+    font-size: 28px;
+  }
+
+  .icon img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .temp {
+    font-size: 36px;
+    margin-top: 10px;
+  }
+
+  .sun, .wind {
+    font-size: 12px;
+  }
+
+  .sun .row>div p, .wind .row>div p {
+    padding-top: 20%;
+  }
+}

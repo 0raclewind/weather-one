@@ -1,0 +1,48 @@
+.forecast {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin: 1% 0 2% 0;
+  padding: 5px 20px 5px 20px;
+}
+
+#days, #hours {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.fifteenHours, .fiveDay {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.fifteenHours {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.fiveDay {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #eee;
+}
+
+.inactive {
+  padding-top: 3px;
+  font-size: 20px;
+  color: #aaa;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width : 330px) {
+  .name {
+    font-size: 12px;
+  }
+}
