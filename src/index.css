@@ -25,17 +25,16 @@ html {
   }
 }
 
-/*@media only screen and (min-height : 500px) {
-  body {
-    background: #1b72b9;
-  }
-}*/
-
-
 @media only screen and (min-height : 700px) {
   body {
-    margin-top: 15%;
+    margin-top: 50px;
     background: linear-gradient(to bottom right, #239AE2, #194196);
+  }
+}
+
+@media only screen and (min-height : 800px) {
+  body {
+    margin-top: 80px;
   }
 }
 
