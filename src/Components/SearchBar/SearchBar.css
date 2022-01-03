@@ -1,21 +1,22 @@
 .Search {
-  margin: 5% 1% 1% 1%;
-  width: 98%;
+  margin: 5% 4% 1% 4%;
+  width: 92%;
 }
 
 .Search input {
-  width: 85%;
+  width: 88%;
   font-size: 24px;
   border-radius: 8px;
+  outline: none;
+  border: none;
 }
 
 .Search .button {
   border-radius: 8px;
-  height: 38px;
-  padding-top: 14px;
-  padding-left: 12px;
-  height: 40px;
-  width: 40px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 36px;
+  width: 36px;
   background-color: rgba(50, 50, 50, 0.3);
   color: #ccc;
 }
@@ -26,7 +27,7 @@
 }
 
 .error {
-  color: #930606;
+  color: #fff;
   font-weight: bold;
   text-align: center;
   height: 20px;

@@ -5,12 +5,12 @@ import Forecast from '../Forecast/Forecast';
 class DisplayWeather extends React.Component {
   componentDidMount() {
     // wind direction arrow control
-    document.getElementById('arrow').style.transform = "rotate("+(this.props.weather.windDeg + 180)+"deg)";
+    document.getElementById('arrow').style.transform = "rotate(" + (this.props.weather.windDeg + 180) + "deg)";
   }
 
   componentDidUpdate() {
     // wind direction arrow control
-    document.getElementById('arrow').style.transform = "rotate("+(this.props.weather.windDeg + 180)+"deg)";
+    document.getElementById('arrow').style.transform = "rotate(" + (this.props.weather.windDeg + 180) + "deg)";
   }
 
   convertTo() {
@@ -40,10 +40,10 @@ class DisplayWeather extends React.Component {
             <div className="name">Sun</div>
             <div className="row">
               <div className="col-xs-6">
-                <p><b>Sunrise</b><br/>{this.props.weather.sunrise}</p>
+                <p><b>Sunrise</b><br />{this.props.weather.sunrise}</p>
               </div>
               <div className="col-xs-6">
-                <p><b>Sunset</b><br/>{this.props.weather.sunset}</p>
+                <p><b>Sunset</b><br />{this.props.weather.sunset}</p>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ class DisplayWeather extends React.Component {
                 </div>
               </div>
               <div className="col-xs-6 windSpeed">
-                <p><b>Speed</b><br/>{this.props.weather.windSpeed}m/s</p>
+                <p><b>Speed</b><br />{this.props.weather.windSpeed}m/s</p>
               </div>
             </div>
           </div>
@@ -68,12 +68,12 @@ class DisplayWeather extends React.Component {
         />
         <div className="text-center footer">
           handbuilt by<a href="https://0raclewind.github.io/"
-          target="_blank" rel="noopener noreferrer"><span className="valdo"><b>Valdo</b></span></a>with
+            target="_blank" rel="noopener noreferrer"><span className="valdo"><b>Valdo</b></span></a>with
           <img src={require('./coffee.png')} height="16px" alt="No coffee" />
           and powered by
           <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">
-            <img src={require('./OpenWeatherMap.svg')} height="10px" alt="No OpenWeatherMap"/>
-          </a>&copy;2019
+            <img src={require('./OpenWeatherMap.svg')} height="10px" alt="No OpenWeatherMap" />
+          </a>&copy; 2022
         </div>
       </div>
     );

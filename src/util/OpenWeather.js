@@ -1,4 +1,4 @@
-const apiKey = '2e47a0bee1e2a7d9c0b4cf08476d838c';
+const apiKey = process.env.REACT_APP_API_KEY;
 const baseUri = 'https://api.openweathermap.org/data/2.5/weather';
 const forecastUri = 'https://api.openweathermap.org/data/2.5/forecast';
 
@@ -11,13 +11,13 @@ const OpenWeather = {
       })
       .then(jsonResponse => {
         if (jsonResponse.cod.toString() === "404") {
-          return {cod: jsonResponse.cod};
+          return { cod: jsonResponse.cod };
         } else if (jsonResponse.cod.toString === "400") {
-          return {cod: jsonResponse.cod};
+          return { cod: jsonResponse.cod };
         } else if (jsonResponse.cod === 200) {
           const sunriseTime = new Date(jsonResponse.sys.sunrise * 1000);
           const sunsetTime = new Date(jsonResponse.sys.sunset * 1000);
-          const sortTime = function(time) {
+          const sortTime = function (time) {
             if (time < 10) {
               return "0" + time;
             }
@@ -28,9 +28,9 @@ const OpenWeather = {
             name: jsonResponse.name + ", " + jsonResponse.sys.country,
             main: jsonResponse.weather[0].main,
             temp: Math.round((jsonResponse.main.temp) - 273.15),
-            sunrise: sortTime(sunriseTime.getHours())+":"+sortTime(sunriseTime.getMinutes()),
-            sunset: sortTime(sunsetTime.getHours())+":"+sortTime(sunsetTime.getMinutes()),
-            icon: "https://openweathermap.org/img/w/"+jsonResponse.weather[0].icon+".png",
+            sunrise: sortTime(sunriseTime.getHours()) + ":" + sortTime(sunriseTime.getMinutes()),
+            sunset: sortTime(sunsetTime.getHours()) + ":" + sortTime(sunsetTime.getMinutes()),
+            icon: "https://openweathermap.org/img/w/" + jsonResponse.weather[0].icon + ".png",
             windSpeed: jsonResponse.wind.speed,
             windDeg: jsonResponse.wind.deg
           };
@@ -46,7 +46,7 @@ const OpenWeather = {
       })
       .then(jsonResponse => {
         if (jsonResponse.cod === "404") {
-          return {cod: jsonResponse.cod};
+          return { cod: jsonResponse.cod };
         } else if (jsonResponse.cod.toString() === "200") {
           let item;
           let fifteenHours = [];
@@ -69,13 +69,13 @@ const OpenWeather = {
             }
           }
 
-          for (item=0; item<5; item++) {
+          for (item = 0; item < 5; item++) {
             const date = new Date(jsonResponse.list[item].dt * 1000);
             let hours = date.getHours();
             if (hours < 10) {
               hours = `0${hours}:00`;
             } else {
-              hours = hours.toString()+":00";
+              hours = hours.toString() + ":00";
             }
             fifteenHours.push({
               id: jsonResponse.list[item].dt,
@@ -85,7 +85,7 @@ const OpenWeather = {
               temp: Math.round((jsonResponse.list[item].main.temp) - 273.15)
             });
           }
-          return {days: days, fifteenHours: fifteenHours};
+          return { days: days, fifteenHours: fifteenHours };
         };
       });
   },
